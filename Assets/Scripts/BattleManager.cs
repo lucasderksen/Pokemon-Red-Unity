@@ -386,6 +386,7 @@ public class BattleManager : MonoBehaviour
                 }
                 if (Inputs.pressed("a"))
                 {
+                    Debug.Log("a pressed");
                     if (selectedOption == (int)BattleOption.Run)
                     {
                         currentmenu = null;
@@ -396,6 +397,8 @@ public class BattleManager : MonoBehaviour
                     }
                     if (selectedOption == (int)BattleOption.Fight)
                     {
+                        Debug.Log("fight");
+                        StartCoroutine(AnimateEnemyHealth(4));                        
                         UpdateMenus();
                     }
 
